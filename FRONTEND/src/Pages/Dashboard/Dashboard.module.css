@@ -1,0 +1,82 @@
+.container{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bolder;
+    width: 100%;
+    height: 100%;
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.topBar{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 10em;
+    border-bottom: 3px solid var(--IAMX-color);
+}
+
+.titleLine h1{
+    font-size: 1.6em;
+    text-shadow: 1px 0px 0px black;
+}
+
+.titleLine{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    height: 2em;
+    width: 100%;
+}
+
+.titleLine svg{
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    right: 1em;
+}
+
+.categories{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    height: 3em;
+    width: 100%;
+    align-items: center;
+    bottom: 0em;
+
+}
+
+.active{
+    border-bottom: 4px solid var(--IAMX-color);
+    text-shadow: .5px 0px 0px black;
+}
+
+.categories h2{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-size: 1.1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.graphic{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 15em;
+}

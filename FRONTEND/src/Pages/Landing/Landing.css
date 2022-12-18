@@ -1,0 +1,69 @@
+.LandingConteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;    
+    padding: 24px;
+}
+
+
+.LandingTitle{
+    font-family: var(--font1);
+    text-align:center;
+    /* width: 335px;
+    height: 68px; */
+    font-size: 28px;
+    font-weight:bolder;
+    text-transform: uppercase;
+    /* line-height: 120%; */
+    margin-left: 46px;
+    margin-right: 46px;
+    color: #000000;
+    font-style: normal;
+}
+
+
+
+.LandingImage{
+    width: 200px;
+    padding: 25px;
+    height: 200px;
+  }
+  
+.LandingButtom{
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+.LandingButtonConteiner{
+    background-color: var(--IAMX-color);
+    margin-bottom: 28px;
+    border-radius: 8px;
+    padding: 0px 16px;
+    width: 100%;
+    min-height: 100px;
+}
+
+.LandingButtonConteiner2{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.LandingTitleText{
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.LandingText{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    width: 98%;    
+}

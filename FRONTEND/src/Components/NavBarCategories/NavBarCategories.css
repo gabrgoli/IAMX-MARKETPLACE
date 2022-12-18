@@ -1,0 +1,79 @@
+
+  .NavBarButtonsCategories{
+    background-color:var(--IAMX-color);
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: row; */
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .NavBarButtonsCategories::-webkit-scrollbar {
+    display: none;
+}
+
+.NavBarButtonsCategories{
+    background-color:var(--IAMX-color);
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: row; */
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .NavBarButtonCategory{
+    background-color:transparent;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    border: 0ch;
+    padding: 16px;
+    line-height: 120%;
+    /* overflow-x: auto; */
+
+
+  }
+
+  .NavBarButtonCategoryActive{
+    color: white;
+    pointer-events: none;
+    cursor: none;
+    font-size: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    padding: 16px;
+    text-transform: uppercase;
+    border: none;
+
+  }
+
+  .indicator {
+    width: 100%;
+    height: 3px;
+    background: #f3f1f0;
+    position: relative;
+    /* margin-top: 58px; */
+    margin-left:0;
+
+    /* -webkit-transition: margin 0.5s ease;
+
+    transition: margin 0.5s ease; */
+  }
+
+  .ButtonIndicatorContent{
+    display: flex;
+    flex-direction: column;
+  }
+
+

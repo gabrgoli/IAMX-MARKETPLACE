@@ -1,0 +1,164 @@
+@media (min-width:600px) { 
+
+    .OD-container{
+        margin: 30px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        border: 1px solid ;
+        border-radius: 8px;
+    }
+    
+    .OD-image-box{
+        
+        margin-right: 20px;
+    }
+    
+    .OD-image-box img{
+        height: 20vw;
+        width: 100%;
+        object-fit: contain;
+        border: 1px solid ;
+        border-radius: 8px;
+        
+    
+    }
+    
+    .OD-image{
+        object-fit: contain;
+    
+    }
+    
+    
+    .OD-details-box{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid ;
+        border-radius: 8px;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+        
+    }
+    
+    .OD-details-box h1{
+        font-size: 3vw;
+        margin: 0px 0px 0px 0px;;
+        vertical-align: text-top;
+        text-align: center;
+    
+        
+    }
+    
+    .OD-details-box Button{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 3px;
+        
+    }
+    
+    .OD-details-box Button:active {
+        background-color: #085066;
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+        /* Lowering the shadow */
+        /* box-shadow: 0 5px #666; */
+        /* transform: translateY(4px); */
+      }
+
+    .OD-cart-button{
+        display: flex;
+        position: absolute;
+
+    }
+    .ButtonShop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+}
+
+
+    @media (max-width:600px) { 
+
+        .OD-container{
+            
+            height: 90vw;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid ;
+            border-radius: 8px;
+        }
+        
+        .OD-image-box{
+            width: 100%;
+            height: 50vw;
+        }
+        
+        .OD-image-box img{
+            /* object-fit: contain; */
+            border: 1px solid ;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+        
+        }
+        
+        .OD-image{
+            object-fit: contain;
+            width: 2px;
+            height: 2px;
+        
+        }
+        
+        
+        .OD-details-box{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid ;
+            border-radius: 8px;
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            min-height: 30vw;
+            
+        }
+        
+        .OD-details-box h1{
+            font-size: 3vw;
+            margin: 0px 0px 0px 0px;;
+            vertical-align: text-top;
+        
+            
+        }
+        
+        .OD-details-box Button{
+          
+            margin: auto;
+            margin-bottom: 3px;
+            
+        }
+        
+        .OD-details-box Button:active {
+            background-color: #085066;
+            transform: scale(0.98);
+            /* Scaling button to 0.98 to its original size */
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* Lowering the shadow */
+            /* box-shadow: 0 5px #666; */
+            /* transform: translateY(4px); */
+          }
+
+          .ButtonShop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 50%;
+        }
+    
+    }
+

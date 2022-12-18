@@ -1,0 +1,90 @@
+/* SearchBar */
+/* .searchBarContainer{
+  background-color: var(--IAMX-color);
+} */
+
+.SearchbarConteiner {
+    background-color: var(--IAMX-color);
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin: 3vh;
+    margin-right: 6vW;
+    height: 42px; 
+    margin-left: 6vw;
+    background-color: white;
+    border-radius: 6px;
+  }
+  
+  .SearchbarConteiner input{
+    border-radius: 6px;
+    position: relative;
+    width: 67%;
+    /* margin-left: 6vw; */
+    height: 38px;
+    border: none;
+    padding: 5px 20px 5px;
+    outline: none;
+    z-index: 0;
+    font-size: 1.2em;
+  }
+
+  .SearchbarConteiner:focus-within{
+    border: 1px solid black;
+    
+  }
+  
+  .SearchbarIconContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: .5em;
+    cursor: pointer;
+    height: 40px;
+    width: 10%;
+    /* border: 2px solid black; */
+    border-radius: 6px 0px 0px 6px;
+    z-index: 1;
+  }
+  .SearchbarIconContent2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: .5em;
+    height: 40px;
+    padding: 0px;
+    width: 23%;
+    /* border: 2px solid black; */
+    border-radius: 6px 0px 0px 6px;
+    z-index: 1;
+  }
+
+  .SearchbarIconContent svg {
+    color: rgba(72, 72, 72, 0.784);
+    height: 80%;
+    width: 80%;
+  }
+  .barcode{
+    color: rgba(72, 72, 72, 0.784);
+    height: 70%;
+    width: 50%;
+  }
+.activeMic{
+  color: rgba(246, 49, 0, 0.784);
+  height: 70%;
+  width: 50%;
+}
+
+.mic{
+  color: rgba(72, 72, 72, 0.784);
+  height: 70%;
+  width: 50%;
+}
+
+
+
