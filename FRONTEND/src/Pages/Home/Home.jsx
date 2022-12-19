@@ -38,7 +38,7 @@ const Home=()=>{
 
 
     useEffect(()=>{
-        dispatch(GETOFFERS())
+        !offers[0]&&dispatch(GETOFFERS())
         dispatch(GETCATEGORIES())
     },[dispatch])
 

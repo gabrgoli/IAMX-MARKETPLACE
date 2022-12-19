@@ -8,7 +8,7 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import SideBar from '../SideBar'
 import { Divider, ListItem, ListItemIcon, ListItemText,CardMedia } from "@mui/material"
 import { useDispatch,useSelector } from 'react-redux';
-import { SIDEMENUOPENCLOSE,SEARCHOFFERSBYCATEGORY,GETCATEGORIES,GETOFFERS,SEARCHBYTITLEOFFERS } from '../../redux/actions';
+import { SIDEMENUOPENCLOSE,GETCATEGORY,GETOFFERS,SEARCHBYTITLEOFFERS } from '../../redux/actions';
 import './NavBar.css'
 import { useState,useEffect } from 'react'
 import {useLocation, useNavigate } from 'react-router-dom';
@@ -18,9 +18,16 @@ import NavBarCategories from '../NavBarCategories/NavBarCategories'
 export default function ButtonAppBar({title,arrow=false}) {
 
 const dispatch = useDispatch()
+const navigate=useNavigate()
 
 let openSideMenu  = ()=>{
   dispatch(SIDEMENUOPENCLOSE(true))
+}
+
+const clickLogo  = ()=>{
+  dispatch(GETOFFERS())
+  dispatch(GETCATEGORY('all'))
+  navigate('/home')
 }
 
 
@@ -47,7 +54,7 @@ let openSideMenu  = ()=>{
                       <MenuIcon />
                     </IconButton>
                     }
-                    <img  className='image-Navbar' src="/IAMX-logo.png" alt="img"/>
+                    <img onClick={ () => clickLogo() }  className='image-Navbar' src="/IAMX-logo.png" alt="img"/>
 
                 </div> 
 

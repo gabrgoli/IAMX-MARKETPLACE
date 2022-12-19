@@ -45,6 +45,9 @@ export const api=process.env.REACT_APP_URL_BACKEND||'http://localhost:3002'
         return response.data
     })
 
+    export const GETCATEGORY=createAction('GETCATEGORY',(category)=>{ 
+        return {payload:category}
+    })
 
     export const SIDEMENUOPENCLOSE=createAction('SIDEMENUOPENCLOSE',(openOrClose)=>{ 
         return {payload:openOrClose}

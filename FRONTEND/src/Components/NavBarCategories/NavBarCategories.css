@@ -46,8 +46,8 @@
 
   .NavBarButtonCategoryActive{
     color: white;
-    pointer-events: none;
-    cursor: none;
+    /* pointer-events: none; */
+    cursor: pointer;
     font-size: 20px;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;

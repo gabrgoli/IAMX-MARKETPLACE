@@ -18,7 +18,7 @@ export default function CardOffer({offer,defaultPic='https://www.wimacpc.com/ass
 
 
   return (
-    <Card onClick={()=>navigate(`/offer/${offer.id}`)} sx={{cursor:'pointer' ,height:520, width: {xs:250 ,sm:250}}}>
+    <Card onClick={()=>navigate(`/offer/${offer.idoffer}`)} sx={{cursor:'pointer' ,height:520, width: {xs:250 ,sm:250}}}>
 
        <CardMedia     
             component="img"

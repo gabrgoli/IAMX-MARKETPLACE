@@ -10,7 +10,7 @@ export default function CardOfferSmall({offer}) {
   const dispatch=useDispatch()
 
   return (
-      <div className='CSmallCont'>
+      <div onClick={()=>navigate(`/offer/${offer.idoffer}`)} className='CSmallCont'>
         <img src={offer?.picture} alt='pic'/>
         <div className='CSmallInfo'>        
             <h4> {offer?.title}  </h4>

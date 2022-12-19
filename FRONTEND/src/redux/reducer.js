@@ -7,6 +7,7 @@ const initialState = {
   offers:[],
   offer:[],
   categories:[],
+  category:"all",
   sideMenuOpenClose:false,
   darkMode:false,
 }
@@ -67,6 +68,10 @@ const rootReducer = createReducer(initialState, (builder) => {
     
     .addCase(actions.GETCATEGORIES.fulfilled, (state, action) => {
       state.categories=action.payload
+    })
+
+    .addCase(actions.GETCATEGORY, (state, action) => {
+      state.category=action.payload
     })
 
     .addCase(actions.SEARCHBYTITLEOFFERS.fulfilled, (state, action) => {
