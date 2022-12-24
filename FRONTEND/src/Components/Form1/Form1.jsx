@@ -7,6 +7,58 @@ import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 
 
+function getErrors(input){
+  let errors = {};
+
+    //amount Validation
+    if (input.amount===''){ 
+      errors.amount = "Amount cannot be empty"
+    } else{
+      errors.amount = ""
+    }
+
+    //walletAdress Validation
+    if (input.walletAdress===''){ 
+      errors.walletAdress = "Wallet Adress cannot be empty"
+    } else{
+      errors.walletAdress = ""
+    }
+
+    //email Validation
+    if(input.email===''){
+      errors.email = "Email cannot be empty"
+    }
+    else{
+      if(!(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/).test(input.email)){
+        errors.email = "Email its not a valid email"
+      }
+      else{
+        errors.email = ""
+      }
+    }
+
+    //mobileNumber Validation
+    if (input.mobileNumber===''){ 
+      errors.mobileNumber = "Mobile number cannot be empty"
+    } else{
+      if (!(/\d/).test(input.mobileNumber) ) {  
+      errors.mobileNumber = "Mobile number must be a number"
+      }else{
+      errors.mobileNumber = ""
+      }
+    }
+
+    //WalletPool Validation
+    if (input.walletPool===''){ 
+      errors.walletPool = "WalletPool cannot be empty"
+    } else{
+      errors.walletPool = ""
+    }
+
+    return errors
+}
+
+
 const Form1 = () => {
 
     const[input,setInput]=useState({
@@ -17,7 +69,7 @@ const Form1 = () => {
         walletAdress:''
     })
 
-    const [errors, setErrors] = useState({
+    let [errors, setErrors] = useState({
         email:'',
         mobileNumber:'',
         walletPool:'',  
@@ -32,62 +84,17 @@ const Form1 = () => {
 
     const [loader,setLoader] = useState(false)
 
-
     //FUNTION VALIDATE
-    const validate=async (ev)=>{
+    const handleChanchge=async (ev)=>{
       setInput((input)=>({...input,[ev.target.name]:ev.target.value}))
       setErrors((errors)=>({...errors,[ev.target.name]:""}))
     }
-
+    
     //FUNCTION SUBMIT
     const handleSubmit= async(e)=>{
         e.preventDefault();
-
-         //amount Validation
-         if (input.amount===''){ 
-           setErrors((errors)=>({...errors,amount:"Amount cannot be empty"}))
-       } else{
-           setErrors((errors)=>({...errors,amount:""}))
-       }
-
-          //walletAdress Validation
-          if (input.walletAdress===''){ 
-            setErrors((errors)=>({...errors,walletAdress:"Wallet Adress cannot be empty"}))
-        } else{
-            setErrors((errors)=>({...errors,walletAdress:""}))
-        }
-
-         //email Validation
-        if (input.email===''){ 
-            setErrors((errors)=>({...errors,email:"Email cannot be empty"}))
-        } else{
-            if (!(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/).test(input.email) ) {  
-                setErrors((errors)=>({...errors,email:"Email its not a valid email"}))
-            }else{
-                setErrors((errors)=>({...errors,email:""}))
-            }
-        }
-
-        //mobileNumber Validation
-        if (input.mobileNumber===''){ 
-          setErrors((errors)=>({...errors,mobileNumber:"Mobile number cannot be empty"}))
-        } else{
-            if (!(/\d/).test(input.mobileNumber) ) {  
-              setErrors((errors)=>({...errors,mobileNumber:"Mobile number must be a number"}))
-            }else{
-            setErrors((errors)=>({...errors,mobileNumber:""}))
-            }
-        }
-
-        //WalletPool Validation
-        if (input.walletPool===''){ 
-            setErrors((errors)=>({...errors,walletPool:"WalletPool cannot be empty"}))
-        } else{
-            setErrors((errors)=>({...errors,walletPool:""}))
-        }
-
-        console.log("errors mostrar:",errors)
-
+        errors=getErrors(input)
+        setErrors(errors)
         errors.email||errors.mobileNumber||errors.walletPool||errors.walletAdress||errors.amount?
           console.log("hay errores")
           :
@@ -100,43 +107,45 @@ const Form1 = () => {
 
 
   return (
-<form id="msform">
-  <div>
-    <h1>Start KYC</h1>
-    <h1>To start the KYC, we need the following information.</h1>
-  
-    <label className="Form1Label">Amount *</label>
-    <input type="text" name="amount" value={input.amount}  placeholder="Amount of Beneficial Owners" onChange={(ev)=>validate(ev)} style={errors.amount?{border:"2px solid red"}:{}} className={errors.amount&&"form2"}/>
-    
-    <label className="Form1Label">Wallet Adress *</label>
-    <div className="Form1Icon"><AiOutlineQuestionCircle/></div>
-    <input type="text" name="walletAdress" value={input.walletAdress} placeholder="Your Wallet Adress" onChange={(ev)=>validate(ev)} style={errors.walletAdress?{border:"2px solid red"}:{}} className={errors.walletAdress&&"form2"}/>
-    
+    <form 
+        className="Form1"
+        onSubmit={(e) => handleSubmit(e)}
+        onChange={(e) => handleChanchge(e)}
+    >
+      <div>
+        <h1>Start KYC</h1>
+        <h1>To start the KYC, we need the following information.</h1>
+      
+        <label className="Form1Label">Amount *</label>
+        <input type="text" name="amount"  placeholder="Amount of Beneficial Owners" className={errors.amount?" formInput formError":"formInput"}/>
+        
+        <label className="Form1Label">Wallet Adress *</label>
+        <div className="Form1Icon"><AiOutlineQuestionCircle/></div>
+        <input type="text" name="walletAdress" placeholder="Your Wallet Adress" className={errors.walletAdress?"formError formInput ":"formInput"}/>
+        
 
-    <label className="Form1Label">E-mail *</label>
-    <div className="Form1Icon"><AiOutlineQuestionCircle/></div>
-    <input type="text" name="email" value={input.email} placeholder="Your E-Mail" onChange={(ev)=>validate(ev)} style={errors.email?{border:"2px solid red"}:{}} className={errors.email&&"form2"} />
-    
-    <label>Phone Number *</label>
-    <div className="Form1Icon"><AiOutlineQuestionCircle/></div>
-    <input type="text" name="mobileNumber" value={input.mobileNumber} placeholder="Your Phone Number" onChange={(ev)=>validate(ev)} style={errors.mobileNumber?{border:"2px solid red"}:{}} className={errors.mobileNumber&&"form2"}/>
-    
-    <label className="Form1Label">walletPool *</label>
-    <input type="text" name="walletPool" value={input.walletPool}  placeholder="Wallet Address Pool" onChange={(ev)=>validate(ev)} style={errors.walletPool?{border:"2px solid red"}:{}} className={errors.walletPool&&"form2"}/>
+        <label className="Form1Label">E-mail *</label>
+        <div className="Form1Icon"><AiOutlineQuestionCircle/></div>
+        <input type="text" name="email" placeholder="Your E-Mail"  className={errors.email?"formError formInput ":"formInput"} />
+        
+        <label className="Form1Label">Phone Number *</label>
+        <div className="Form1Icon"><AiOutlineQuestionCircle/></div>
+        <input type="text" name="mobileNumber" placeholder="Your Phone Number"  className={errors.mobileNumber?"formError formInput ":"formInput"}/>
+        
+        <label className="Form1Label">walletPool *</label>
+        <input type="text" name="walletPool"  placeholder="Wallet Address Pool"  className={errors.walletPool?"formError formInput ":"formInput"}/>
 
-    <button type="submit" onClick={(e)=>handleSubmit(e)} name="next" className="Button1" value="Button1" onChange={(ev)=>validate(ev)}>{loader?"Loading...":"Next"}</button>
-
-    
-    
-    <section className="errorsClass">
-        {errors.mobileNumber?<div>{errors.mobileNumber} </div>:<></>}
-        {errors.walletAdress?<div>{errors.walletAdress} </div>:<></>}
-        {errors.amount?<div>{errors.amount} </div>:<></>}
-        {errors.email?<div>{errors.email} </div>:<></>}
-        {errors.walletPool?<div>{errors.walletPool} </div>:<></>}
-    </section>
-  </div>
-</form>
+        <button type="submit" name="next" className={loader?"Button1 Button1Disable":"Button1"} value="Button1">{loader?"Loading...":"Next"}</button>
+        
+        <section className="errorsClass">
+            {errors.amount?<div>{errors.amount} </div>:<></>}
+            {errors.walletAdress?<div>{errors.walletAdress} </div>:<></>}
+            {errors.email?<div>{errors.email} </div>:<></>}
+            {errors.mobileNumber?<div>{errors.mobileNumber} </div>:<></>}
+            {errors.walletPool?<div>{errors.walletPool} </div>:<></>}
+        </section>
+      </div>
+    </form>
   );
 };
 

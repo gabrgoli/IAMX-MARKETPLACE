@@ -1,0 +1,67 @@
+/* CardUsers */
+
+.box-user-Identitys{
+    width: 90%;
+    margin:auto;
+    border-bottom: 3px solid #bbb;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  
+  }
+  
+  .user-icon{
+    margin: 10px;
+    color:var(--IAMX-color); 
+  
+  }
+  
+  .user-data {
+    display: flex;
+    flex-direction: column; 
+    justify-content: left;
+  }
+  
+  
+  .edit{
+    color: var(--IAMX-color);
+    display: flex;
+    justify-content: right;
+    margin-right: 5vw;
+    margin-left:  auto;
+    
+  }
+  
+  .text{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size:16px ;
+    font-weight: 400;
+    margin: 30px;
+    text-align: center;
+    line-height: 24px;
+  }
+  
+  
+  .userName{
+    font-weight: 700;
+  }
+  
+  
+  .userEmail{
+  
+  }
+  
+  .addIdentity{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    margin-left: 30px;
+  
+  
+  }
+  
+  .createId{
+    margin-left: 10px;
+  }
+  

@@ -1,6 +1,6 @@
 import axios from "axios"
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit"
-import Cookie from 'js-cookie'
+// import Cookie from 'js-cookie'
 
 export const api=process.env.REACT_APP_URL_BACKEND||'http://localhost:3002'
 //export const api='https://app3tech-backend.herokuapp.com'

@@ -69,7 +69,7 @@ export default function SearchInput({
 
   micInput ? dinamic = true : dinamic = false
   return (
-    //<div className="searchBarContainer">
+    <div className="ContainerBackground">
       <form
         className="SearchbarConteiner"
         component="form"
@@ -93,6 +93,6 @@ export default function SearchInput({
           <BiBarcodeReader className="barcode"/>
         </div>
       </form>
-    //</div>
+    </div>
   );
 }

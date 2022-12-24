@@ -1,0 +1,60 @@
+/* CardOfferSmall */
+
+
+  
+  /* .CardOfferMobileInfo h1{
+    font-size: 1.5em;
+    font-weight: 300;
+  } */
+  .CardOfferMobileContainer{
+    display: flex;
+    /* position: relative; */
+    width:100%;
+    height: 120px;
+    align-items: center;
+    border: 1px solid rgba(211, 211, 211, 0.966);
+    margin: 5px 0 5px;
+  }
+  
+  .CardOfferMobileContainer img{
+    width: 20%;
+    height: 100%;
+    object-fit: contain;
+    margin:6px;
+    
+  }
+  .CardOfferMobileInfo{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    /* width: 43%;
+    right: 1em; */
+  }
+
+  .CardOfferMobileInfo h4{
+    margin: 0;
+  }
+  
+  .CardOfferMobileTitle{
+    height: 100%;
+    font-size: 9px;
+    margin: 0;
+  }
+  
+  /* .CardOfferMobileContainer h4{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  } */
+  
+  .CardOfferMobilePrice{
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .CardOfferMobilePrice{
+    display:'flex';
+  }
+
+  

@@ -10,13 +10,9 @@ import Landing from './Pages/Landing/Landing';
 import TermsConditions from './Pages/TermsConditions/TermsConditions';
 import OfferDetails from './Pages/OfferDetails/OffferDetails';
 import StartForm from './Pages/StartForm/StartForm';
-import Login from './Pages/Login';
+import Login from './Pages/Login/Login';
 import ManageIdentity from './Pages/ManageIdentity';
-import PaymentRequest from './Pages/PaymentRequest';
-import CPay from './Pages/CPay';
 import Dashboard from "./Pages/Dashboard/Dashboard";
-/// user ////
-import Profile from './Pages/Profile'
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -49,9 +45,6 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path='/offer/:id' element={<OfferDetails/>}/>
             <Route path="/ManageIdentity" element={<ManageIdentity />} />
-            <Route path="/paymentrequest" element={<PaymentRequest />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/cpay" element={<CPay />} />
             <Route path="/dashboard" element={<Dashboard />} />
           {/* </Route>
         </Route> */}

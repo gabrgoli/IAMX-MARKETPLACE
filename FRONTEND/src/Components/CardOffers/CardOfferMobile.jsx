@@ -2,19 +2,20 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Rating from '../Components/Rating'
+import Rating from '../Rating'
+import './CardOfferMobile.css'
 
-export default function CardOfferSmall({offer}) {
+export default function CardOfferMobile({offer}) {
 
   const navigate=useNavigate()
   const dispatch=useDispatch()
 
   return (
-      <div onClick={()=>navigate(`/offer/${offer.idoffer}`)} className='CSmallCont'>
+      <div onClick={()=>navigate(`/offer/${offer.idoffer}`)} className='CardOfferMobileContainer'>
         <img src={offer?.picture} alt='pic'/>
-        <div className='CSmallInfo'>        
-            <h4> {offer?.title}  </h4>
-            <div className='CSmallPrice'>
+        <div className='CardOfferMobileInfo'>        
+            <h4 className='CardOfferMobileTitle'> {offer?.title}  </h4>
+            <div className='CardOfferMobilePrice'>
 
             {
                 !offer.percent?
@@ -25,14 +26,14 @@ export default function CardOfferSmall({offer}) {
                   <h4>$<span>{new Intl.NumberFormat().format(offer.price)*(100-offer.percent)/100}</span>  </h4>              
                 </>
 
-              }
+            }
 
               <h4> {offer?.percent? `${offer.percent}%`: <></>}  </h4>
             </div>
 
               <h4> {offer?.country}  </h4>
 
-              <Rating/>
+              <div className="CardOfferMobileRaiting"><Rating/></div>
 
         </div>
       </div>

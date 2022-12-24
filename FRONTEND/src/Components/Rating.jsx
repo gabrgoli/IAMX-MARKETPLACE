@@ -9,7 +9,7 @@ export default function BasicRating({number=2,quantity=1026}) {
   return (
     <Box sx={{display:'flex', alignItems:'center'}}>
       <Rating  name="read-only" value={number} readOnly /> 
-      <Typography sx={{fontWeight:'300', fontSize:'15px'}}>{quantity}</Typography>
+      <Typography sx={{fontWeight:'300', fontSize:'15px'}}>{"(" + quantity +")"}</Typography>
     </Box>
   );
 }

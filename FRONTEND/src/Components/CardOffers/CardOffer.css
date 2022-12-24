@@ -1,0 +1,28 @@
+/* CardOffer */
+.CardOfferContainer{
+  border-color: rgb(6, 1, 1);
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  width: 200px;
+  height: 465px;
+  padding: 4px;
+}
+
+.CardOfferPrice h4 span{
+    font-size: 20px;
+  }
+  
+.CardOfferTitle{
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 130%;
+  margin: 0;
+  
+}
+
+.CardOfferinfo{
+  box-sizing: content-box;
+}
+  
+

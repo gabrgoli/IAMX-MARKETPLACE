@@ -4,7 +4,7 @@
 }
 
 *{
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   /* filter: invert(100%); */
 
 }
@@ -18,6 +18,19 @@ body {
 
 
 }
+
+
+.mainContainer{
+  /* position: relative;
+  min-height: 100vh;
+  width: 100vw; */
+  padding: 30px;
+}
+
+/* h1 {
+  font-size: 20px;
+  margin: 0.67em 0;
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -41,6 +54,7 @@ html {
 }
 
 .Button1{
+  position: relative;
   font-family: var(--font1);
   background-color: var(--IAMX-color);
   border-radius: 8px;
@@ -48,9 +62,27 @@ html {
   padding: 18px;
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 120%;
+  font-size: 20px !important;
+  line-height: 140%;
   width: 100%;
+  height: 60px;
+}
+
+.Button1 h1{
+  font-family: var(--font1);
+  background-color: var(--IAMX-color);
+  font-size: 20px !important;
+}
+
+.Button1 .icon{
+  position: absolute;
+  right: 24px;
+  top: 33%;
+}
+
+.Button1Disable{
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 
@@ -61,11 +93,7 @@ html {
 
 
 
-.mainContainer{
-  position: relative;
-  min-height: 100vh;
-  width: 100vw;
-}
+
 
 .footer {
   grid-area: footer;
@@ -93,20 +121,7 @@ html {
 
 
 
-/* CardOffer */
-.CardOfferBigPrice h4 span{
-  font-size: 20px;
-}
 
-.CardOfferBigTitle{
-  font-size: 20px;
-  font-weight: 600;
-  
-}
-
-.CardOfferCardText{
-  line-height: 10px;
-}
 
 /*Swiper*/
 .swiperBox{
@@ -125,146 +140,8 @@ html {
   background-color: #007efb;
   z-index: 0;
 }
-/* CardOfferSmall */
-
-.offersPage{
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  min-height: 70em;
-  border-radius: 1.5em 1.5em 0 0;
-  background-color: #fcfcfc;
-  margin-top: 11.7em;
-
-}
-
-.CSmallInfo{
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 43%;
-  right: 1em;
-  max-height: 100%;
-}
-.CSmallInfo h1{
-  font-size: 1.5em;
-  font-weight: 300;
-}
-.CSmallCont{
-  display: flex;
-  position: relative;
-  width:100%;
-  align-items: center;
-  border: 1px solid rgba(211, 211, 211, 0.966);
-  margin: 5px 0 5px;
-}
-
-.CSmallCont img{
-  width: 20vh;
-  height: 20vh;
-  object-fit: contain;
-  margin:6px;
-  
-}
-
-.CSmallCont h4{
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-}
-
-.CSmallPrice h4 span{
-  font-weight: 500;
-}
-
-.CSmallPrice{
-  display:'flex';
-}
 
 
-/* Login */
-
-.textLogin1{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  font-family: 'Space Grotesk', sans-serif; 
-  margin: 15px;
-  font-size:32px ;
-  font-weight: 900;
-  letter-spacing: 0.0412143px;
-  color: #000000;
-  font-family: 'Space Grotesk';
-  line-height: 41px;
-  
-}
-.textLogin2{
-  font-family: 'Space Grotesk', sans-serif;
-  font-size:16px ;
-  margin: 15px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-}
-
-
-.buttonLogin{
-  width: 90vw;
-  height: 60px;
-  margin: 15px;
-  color: #f4f2f2;
-  background-color: var(--IAMX-color);
-  font-weight: 600;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  border:none;
-  ;
-
-}
-
-.buttonRegister{
-width: 90vw;
-height: 60px;
-margin: 15px;
-color: var(--IAMX-color);
-background-color: #FFFFFF;
-font-weight: 600;
-font-size: 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: 'Space Grotesk', sans-serif;
-border: 2px solid var(--IAMX-color);
-
-
-}
-
-
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-.logo-Login{
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
 /* PaymentRequest */
 .box-buttons-paymentRequest{
   display: flex;
@@ -286,147 +163,5 @@ border: 2px solid var(--IAMX-color);
   ;
 
 }
-
-
-/* CPay */
-.contCPay{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width:90vw;
-  margin: auto;
-}
-
-.textCpay{
-  font-family: 'Space Grotesk', sans-serif;
-  font-size:16px ;
-  font-weight: 400;
-  margin: 30px;
-  text-align: center;
-  line-height: 24px;
-}
-
-.buttonCPay{
-  margin: auto;
-  margin-top: 10px;
-  width: 90vw;
-  height: 60px;
-  color: #f4f2f2;
-  background-color: var(--IAMX-color);
-  font-weight: 600;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  border:none;
-}
-
-
-.inputCpay{
-  width:100%;
-  height: 60px;
-  top: 319px;
-  border: 1px solid #000000;
-  margin-top: 10px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  -webkit-box-sizing: border-box;
-  padding-left: 12px;
-  padding-right: 50px;
-
-}
-
-.contCPay a{
-  color:var(--IAMX-color);
-  align-self: flex-end;
-}
-
-.input-wrapper{
-position: relative;
-  width:100%;
-}
-
-.input-wrapper .icon{
-  color:var(--IAMX-color);
-position: absolute;
-width: 28px;
-height: 28px;
-display: block;
-  bottom: 1.15rem;
-  right: 1rem;
-  
-}
-
-
-/* CardUsers */
-
-.box-user-Identitys{
-  width: 90%;
-  margin:auto;
-  border-bottom: 3px solid #bbb;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-
-}
-
-.user-icon{
-  margin: 10px;
-  color:var(--IAMX-color); 
-
-}
-
-.user-data {
-  display: flex;
-  flex-direction: column; 
-  justify-content: left;
-}
-
-
-.edit{
-  color: var(--IAMX-color);
-  display: flex;
-  justify-content: right;
-  margin-right: 5vw;
-  margin-left:  auto;
-  
-}
-
-.text{
-  font-family: 'Space Grotesk', sans-serif;
-  font-size:16px ;
-  font-weight: 400;
-  margin: 30px;
-  text-align: center;
-  line-height: 24px;
-}
-
-
-.userName{
-  font-weight: 700;
-}
-
-
-.userEmail{
-
-}
-
-.addIdentity{
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  margin: 20px;
-  margin-left: 30px;
-
-
-}
-
-.createId{
-  margin-left: 10px;
-}
-
-
 
 

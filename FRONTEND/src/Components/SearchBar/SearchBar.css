@@ -1,7 +1,7 @@
 /* SearchBar */
-/* .searchBarContainer{
+.ContainerBackground{
   background-color: var(--IAMX-color);
-} */
+}
 
 .SearchbarConteiner {
     background-color: var(--IAMX-color);
@@ -21,13 +21,13 @@
     border-radius: 6px;
     position: relative;
     width: 67%;
-    /* margin-left: 6vw; */
     height: 38px;
     border: none;
     padding: 5px 20px 5px;
     outline: none;
     z-index: 0;
     font-size: 1.2em;
+    box-sizing: border-box;
   }
 
   .SearchbarConteiner:focus-within{

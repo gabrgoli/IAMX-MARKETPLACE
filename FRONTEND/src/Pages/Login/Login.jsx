@@ -1,6 +1,7 @@
 import { Grid,CardMedia, Box, Typography, Divider,Container } from '@mui/material'
 import * as React from 'react'
-import CardUser from '../Components/CardUser/CardUser'
+import CardUser from '../../Components/CardUser/CardUser'
+
 
 const Login=()=>{
 

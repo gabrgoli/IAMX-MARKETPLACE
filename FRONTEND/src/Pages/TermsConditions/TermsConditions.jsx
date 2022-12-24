@@ -10,7 +10,7 @@ const TermsConditions = () => {
     <div>
           <div className='TermsConditionsContainer'>
               <div className='TermsConditionsContainerTitle'>
-                <img src="termsConditionIcons.svg"></img>
+                <img src="termsConditionIcons.svg" alt='noimg'></img>
                 <h1 className='TermsConditionsTitle'>
                   Terms & Conditions
                   Privacy Policy

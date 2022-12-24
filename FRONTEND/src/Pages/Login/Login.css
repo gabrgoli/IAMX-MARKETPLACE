@@ -1,0 +1,82 @@
+/* Login */
+
+.textLogin1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif; 
+    margin: 15px;
+    font-size:32px ;
+    font-weight: 900;
+    letter-spacing: 0.0412143px;
+    color: #000000;
+    font-family: 'Space Grotesk';
+    line-height: 41px;
+    
+  }
+  .textLogin2{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size:16px ;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+  }
+  
+  
+  .buttonLogin{
+    width: 90vw;
+    height: 60px;
+    margin: 15px;
+    color: #f4f2f2;
+    background-color: var(--IAMX-color);
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    border:none;
+    ;
+  
+  }
+  
+  .buttonRegister{
+  width: 90vw;
+  height: 60px;
+  margin: 15px;
+  color: var(--IAMX-color);
+  background-color: #FFFFFF;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  border: 2px solid var(--IAMX-color);
+  
+  
+  }
+  
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .logo-Login{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }

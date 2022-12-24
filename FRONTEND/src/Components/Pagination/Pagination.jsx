@@ -14,25 +14,12 @@ export default function Pagination ({offersPerPage,  allOffers, pagination, curr
     return(
         <>
 
-            {/* PANTALLA CHICA
-            <Box margin={3} display='flex' justifyContent='center'>
-                <Grid container  sx={{display:{xs:'flex',md:'none'},justifyContent:{xs:'center',md:'none'}}}> 
-                    {pageNumber &&
-                            pageNumber.map(number => (
-                                <Grid key={number}    xs={1} sx={{display:{xs:'flex',md:'none'},justifyContent:'', marginX:'20px'}}>   
-                                    <Box key={number} display='flex' flexDirection='row'  className={currentPage===number?'barrasActivo':'barras'} onClick = {()=> pagination (number)}>{number}</Box>       
-                                </Grid>
-                            ))
-                    }
-                </Grid>
-            </Box> */}
-
-            {/* PANTALLA GRANDE */}
-
             <div className="paginationWidth">
             <Box className="boxPagination"  display='flex' flexDirection='row' justifyContent='center' sx={{display:{xs:'flex',md:'flex'}}}>
                 <div className="leftArrow">
-                    <HiChevronDoubleLeft />
+                    <HiChevronDoubleLeft
+                        onClick = {currentPage!==1 ? ()=> pagination (currentPage-1) : null}
+                    />
                     <span classnName="paginationLine"></span>
                 </div>
                 
@@ -50,7 +37,9 @@ export default function Pagination ({offersPerPage,  allOffers, pagination, curr
                 }
                           <div className="rightArrow">
                             <span classnName="paginationLine"></span>
-                            <HiChevronDoubleRight />
+                            <HiChevronDoubleRight
+                                onClick = {currentPage < pageNumber.length?()=> pagination (currentPage+1):null}
+                            />
                            </div>
             </Box>
             </div>
