@@ -5,6 +5,7 @@
     align-items: center;    
     margin-left: 24px;
     margin-right: 24px;
+    margin-bottom: 85px;
 }
 
 
@@ -26,9 +27,10 @@
 }
 
 .LandingImage{
-    width: 200px;
-    padding: 25px;
-    height: 200px;
+    width: 120px;
+    height: 152px;
+    margin-bottom: 60px;
+    margin-top: 26px;
   }
   
 .LandingButtom{
@@ -47,9 +49,7 @@
     margin-bottom: 28px;
     border-radius: 8px;
     padding: 0px 16px;
-    width: 100%;
     height: 100px;
-    min-height: 100px;
     display: flex;
     align-items: center;
 }

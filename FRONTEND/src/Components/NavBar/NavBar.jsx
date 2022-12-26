@@ -32,6 +32,8 @@ const clickLogo  = ()=>{
 
 
   return (
+    <>
+    
     <Box>
         <AppBar   position="static">
             <Toolbar className='navBar' >
@@ -75,6 +77,7 @@ const clickLogo  = ()=>{
 
         </AppBar>
     </Box>
+    </>
   );
 }
 
