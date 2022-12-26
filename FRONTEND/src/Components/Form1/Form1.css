@@ -1,14 +1,40 @@
 /*form styles*/
 .Form1 {
-	margin: 24px;
+	margin: 25px;
 }
 
+#FormTitle{
+	font-family:var(--font1);
+	font-style: normal;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 120%;
+	text-align: center;
+	color: #000000;
+}
+
+#FormSubTitle{
+	font-family:var(--font1);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 130%;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 50px;
+}
+
+
 .formInput{
+	box-sizing: border-box;
 	background-color: transparent;
 	padding: 0px;
+	padding-bottom: 5px;
+	padding-right: 27px;
 	border: 0px;
-	border-bottom: 1px solid rgb(0, 0, 0);
-	margin-bottom: 10px;
+	border-bottom: 1px solid #000000;
+	
+	height: calc(26px+6px);
 	width: 100%;
 	/* box-sizing: border-box; */
 	font-family: var(--font1);
@@ -29,7 +55,7 @@ opacity: 1; /* Firefox */
 
 .Form1 button{
 	width: 100%;
-	margin-top: 65px;
+	margin-top: 32px;
 	border: 0px;
 }
 
@@ -40,25 +66,27 @@ opacity: 1; /* Firefox */
 	box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.Form1Icon svg{
+.Form1InputIconBox svg{
 	position: absolute;
-	right: 28px;
+	bottom: 3px;
+	/* top:2px; */
+	right: 0px;
 	color: var(--IAMX-color);
-	width: 22px;
-	height: 21px;
+	width: 28px;
+	height: 28px;
+
 }
 
-
-
-
-
-
+.Form1InputIconBox{
+	position: relative;
+	margin-bottom: 28px;
+}
 
 .Form1Label{
-font-family: var(--font1);
-font-size: 16px;
-margin-top: 19px;
-margin-bottom: 7px;
+	font-family: var(--font1);
+	font-size: 16px;
+	margin-top: 19px;
+	margin-bottom: 7px;
 }
 
 .errorsClass{
