@@ -1,26 +1,35 @@
+.boxPagination{
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 2.5em;
+  border: 1px solid rgba(211, 211, 211, 0.966);
+  border-radius: .3em;
+  justify-content: center;
+}
+
+
+
 .PaginationActive {
     color: rgb(0, 0, 0);
     background-color: transparent;
     float: center;
     padding: 8px 16px;
-    cursor: pointer;
-    border: 1px solid rgb(0, 0, 0);
     text-align: center;
-    margin: 0 8px 0 8px;
     align-items: center;
+    border: 1px solid rgb(0, 0, 0);
   }
   .PaginationNotActive {
     color: rgb(0, 0, 0);
     background-color: transparent;
     float: center;
     padding: 8px 16px;
-    cursor: pointer;
-    margin: 8px 8px;
     text-align: center;
     align-items: center;
+    cursor: pointer;
   }
   
-  .PaginationNotActive:hover:not(.activo){
+  .PaginationNotActive:hover{
     background-color: gray;
   }
   
@@ -44,37 +53,39 @@
     align-self: center;
   }
   
-  .leftArrow{
+  .Arrow{
     display: flex;
-    position: absolute;
     height: 100%;
     align-items: center;
-    left: 1em;
+    justify-content: center;
     background:transparent;
     border:none;
     gap:1em;
+    cursor: pointer;
   }
-  .rightArrow{
-    display: flex;
-    position: absolute;
-    height: 100%;
-    align-items: center;
-    right: 1em;
+
+  .Arrow:Hover{
+    background-color: gray;
+  }
+
+  button:disabled:hover{
     background:transparent;
-    border:none;
-    gap: 1em;
+    cursor: auto;
+  }
+
+
+  .ArrowRight{
+    position: absolute;
+    right: 0em;
+    padding-right: 10px;
+  }
+  .ArrowLeft{
+    position: absolute;
+    left: 0em;
+    padding-left: 10px;
   }
   
-  .leftArrow svg , .rightArrow svg {
+  .ArrowRight svg , .ArrowLeft svg {
     height: 50%;
     width: 100%;
-  }
-  .boxPagination{
-    display: flex;
-    position: relative;
-    width: 80%;
-    height: 2.5em;
-    border: 1px solid rgba(211, 211, 211, 0.966);
-    border-radius: .3em;
-    justify-content: center;
   }

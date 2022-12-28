@@ -3,14 +3,13 @@ import * as React from 'react'
 import { Box, Divider, Drawer, IconButton, Input, InputAdornment, List, ListItem, ListItemIcon, ListItemText, ListSubheader } from "@mui/material"
 import { AccountCircleOutlined, AdminPanelSettings, CategoryOutlined, ConfirmationNumberOutlined, EscalatorWarningOutlined, FemaleOutlined, InvertColors, LoginOutlined, MaleOutlined, SearchOutlined, VpnKeyOutlined } from "@mui/icons-material"
 import { useDispatch,useSelector } from 'react-redux';
-import { SIDEMENUOPENCLOSE,GETCATEGORIES,SEARCHOFFERSBYCATEGORY,SEARCHBYTITLEOFFERS} from '../redux/actions';
+import { GETCATEGORIES,SEARCHOFFERSBYCATEGORY,SEARCHBYTITLEOFFERS} from '../redux/actions';
 import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
-export default function SideMenu()   {
+export default function SideMenu({openSideMenu,setOpenSideMenu})   {
 
-let sideMenuOpenClose=useSelector((state)=>state.rootReducer.sideMenuOpenClose)
 let categories=useSelector((state)=>state.rootReducer.categories)
 let darkMode=useSelector((state)=>state.rootReducer.darkMode)
 const [input, setInput] = React.useState('')
@@ -22,27 +21,18 @@ useEffect(()=>{
 
   const dispatch = useDispatch()
 
-  const closeSideMenu  = ()=>{
-    dispatch(SIDEMENUOPENCLOSE(false))
-  }
-
-  const searchSideBar  = ()=>{
-    dispatch(SEARCHBYTITLEOFFERS(input))
-    closeSideMenu()
-  }
-
   const clickCategory  = (category)=>{
      dispatch(SEARCHOFFERSBYCATEGORY({category:category.category}))
-     closeSideMenu()
+     setOpenSideMenu(false)
   }
-  
+
 
   return (
     <Drawer
-        open={ sideMenuOpenClose }
+        open={openSideMenu}
         anchor='left'
         sx={{backdropFilter: 'blur(4px)', transition: 'all 0.5s ease-out' }}
-        onClose={closeSideMenu} 
+        onClose={()=>setOpenSideMenu(false)} 
     >
         <Box className={darkMode&&'darkmode'}  sx={{width: 250, paddingTop: 5, height:'100%' }}>
             
@@ -55,7 +45,7 @@ useEffect(()=>{
                        e.preventDefault()
                        dispatch(SEARCHBYTITLEOFFERS(input))
                        navigate(`/home`)
-                       closeSideMenu()
+                       setOpenSideMenu(false)
                     }}
                     >
                         <Input
@@ -67,7 +57,10 @@ useEffect(()=>{
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
-                                    onClick={()=>searchSideBar()}
+                                    onClick={()=>{
+                                        dispatch(SEARCHBYTITLEOFFERS(input))
+                                        setOpenSideMenu(false)
+                                      }}
                                     aria-label="toggle password visibility"
                                     >
                                     <SearchOutlined />

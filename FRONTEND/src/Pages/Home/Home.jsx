@@ -5,7 +5,6 @@ import { useState,useEffect } from 'react'
 
 //Components Imports
 import CardOffer from '../../Components/CardOffers/CardOffer'
-import CardOfferMobile from '../../Components/CardOffers/CardOfferMobile'
 // import NavBar from '../../Components/NavBar/NavBar'
 import Loading from '../../Components/Loading/Loading'
 // import OrderByPrice from '../../Components/OrderByPrice'
@@ -26,7 +25,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 //CSS
-import './Home.css'
+import style from './Home.module.css'
 
 
 const slideImages=['https://res.cloudinary.com/dnlooxokf/image/upload/v1654579315/images/jwupcxolofvkyfzrdvin.png','https://res.cloudinary.com/dnlooxokf/image/upload/v1654579317/images/qgizpdigf71farfs88ae.png','https://res.cloudinary.com/dnlooxokf/image/upload/v1654579317/images/wgwbatmjliclmqek0k5r.png','https://res.cloudinary.com/dnlooxokf/image/upload/v1654579318/images/gstne4ffczw3e6zql5mh.png','https://res.cloudinary.com/dnlooxokf/image/upload/v1654579318/images/x35mc8bzxto8bf4mkclm.png','https://res.cloudinary.com/dnlooxokf/image/upload/v1654579318/images/s6wjxqzsxwcrvzua1oun.png','https://res.cloudinary.com/dnlooxokf/image/upload/v1654579319/images/ho68csnn5muuhecl33kj.png']
@@ -58,7 +57,7 @@ const Home=()=>{
     return(
         <LayoutPrincipal>
           <div className={darkMode && "darkmode"}>
-            <div className="mainContainer">
+            <div className={style.Container}>
                 {/* <FilterByCategory title={'Filter'}/> */}
                 <div className="swiperBox">
                   <Swiper
@@ -86,7 +85,7 @@ const Home=()=>{
                     ))}
                   </Swiper>
                 </div>
-                <div className="offersPage">
+                <div className={style.offersContainer}>
                   {offers.length === 0 && <Loading></Loading>}
                   {offers[0] !== "No Offers" && (
                     <Pagination
@@ -102,29 +101,20 @@ const Home=()=>{
 
                   {offers[0] === "No Offers"?  
                     (
-                      <div className="HomeTextNoOffers">
+                      <div className={style.HomeTextNoOffers}>
                         There are no offers in this category
                       </div>
                     ) 
                     : 
-                    <div>
-                    
-                          <div className="CardProductMobileGrid">
-                              {
-                                  currentOffers.map((offer) => (
-                                    <CardOfferMobile key={offer.idoffer} offer={offer} />
-                                ))
-                              }
-                          </div>
-                          <div className="CardProductGrid">
-                              {
-                                  currentOffers.map((offer) => (
-                                    <CardOffer key={offer} offer={offer} />
-                                ))
-                              }
-                          </div>
-                    
-                    </div>     
+
+                    <div className={style.CardProductGrid}>
+                        {
+                            currentOffers.map((offer) => (
+                              <CardOffer key={offer} offer={offer} />
+                          ))
+                        }
+                    </div>
+  
                   }
 
 

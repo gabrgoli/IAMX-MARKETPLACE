@@ -8,7 +8,7 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import SideBar from '../SideBar'
 import { Divider, ListItem, ListItemIcon, ListItemText,CardMedia } from "@mui/material"
 import { useDispatch,useSelector } from 'react-redux';
-import { SIDEMENUOPENCLOSE,GETCATEGORY,GETOFFERS,SEARCHBYTITLEOFFERS } from '../../redux/actions';
+import { GETCATEGORY,GETOFFERS,SEARCHBYTITLEOFFERS } from '../../redux/actions';
 import './NavBar.css'
 import { useState,useEffect } from 'react'
 import {useLocation, useNavigate } from 'react-router-dom';
@@ -20,16 +20,13 @@ export default function ButtonAppBar({title,arrow=false}) {
 const dispatch = useDispatch()
 const navigate=useNavigate()
 
-let openSideMenu  = ()=>{
-  dispatch(SIDEMENUOPENCLOSE(true))
-}
+const [openSideMenu, setOpenSideMenu] = React.useState(false)
 
 const clickLogo  = ()=>{
   dispatch(GETOFFERS())
   dispatch(GETCATEGORY('all'))
   navigate('/home')
 }
-
 
   return (
     <>
@@ -38,7 +35,7 @@ const clickLogo  = ()=>{
         <AppBar   position="static">
             <Toolbar className='navBar' >
                 <div className='leftNavbar'>
-                  <SideBar/>
+                  <SideBar openSideMenu={openSideMenu} setOpenSideMenu={setOpenSideMenu}/>
                     {arrow?
                             <IconButton
                               className='arrow'
@@ -52,7 +49,7 @@ const clickLogo  = ()=>{
                             </IconButton>
                     :
                     <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}
-                    onClick={openSideMenu}>
+                    onClick={()=>setOpenSideMenu(true)}>
                       <MenuIcon />
                     </IconButton>
                     }

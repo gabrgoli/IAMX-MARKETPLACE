@@ -6,7 +6,6 @@ const StartForm = () => {
   return (
     <div>
         <div>
-        StartForm
         <Form1/>
         </div>
     </div>

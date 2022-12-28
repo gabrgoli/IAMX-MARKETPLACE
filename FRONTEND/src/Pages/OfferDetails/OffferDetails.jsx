@@ -18,6 +18,7 @@ import { useParams } from 'react-router-dom';
 import Loading from '../../Components/Loading/Loading'
 import { GETOFFER} from '../../redux/actions';
 import './OfferDetails.css'
+// import '../../Components/Button1/Button1.css'
 import { BsCart3 } from "react-icons/bs";
 import Raiting from '../../Components/Rating'
 import LayoutPrincipal from '../../Layouts/LayoutPrincipal'
@@ -68,9 +69,9 @@ const ProductDetails=()=>{
                 <h3>{product.category}</h3>
                 <p>{product.description}</p>
                 <Raiting number={4} quantity={1024}/>
-                <button className='Button1'>
+                <button className='Button1A'>
                     <h1>Order Now</h1>
-                    <div className='icon'><BsCart3/></div>
+                    <div className='Button1AIcon'><BsCart3/></div>
                 </button>
                 
                 

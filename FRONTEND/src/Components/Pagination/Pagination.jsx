@@ -2,7 +2,7 @@ import React from 'react';
 //import { Link } from 'react-router-dom';
 import { Grid,Box } from '@mui/material'
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
-import './Pagination.css'
+import style from './Pagination.module.css'
 
 export default function Pagination ({offersPerPage,  allOffers, pagination, currentPage }){
     const pageNumber = []
@@ -14,33 +14,31 @@ export default function Pagination ({offersPerPage,  allOffers, pagination, curr
     return(
         <>
 
-            <div className="paginationWidth">
-            <Box className="boxPagination"  display='flex' flexDirection='row' justifyContent='center' sx={{display:{xs:'flex',md:'flex'}}}>
-                <div className="leftArrow">
-                    <HiChevronDoubleLeft
-                        onClick = {currentPage!==1 ? ()=> pagination (currentPage-1) : null}
-                    />
-                    <span classnName="paginationLine"></span>
-                </div>
+            <div className={style.paginationWidth}>
+            <Box className={style.boxPagination}  >
+                <button disabled={currentPage===1?true:false} className={`${style.Arrow} ${style.ArrowLeft}`} onClick = {currentPage!==1 ? ()=> pagination (currentPage-1) : null}>
+                    <HiChevronDoubleLeft/>
+                    <span classnName={style.paginationLine}></span>
+                </button>
                 
                 {pageNumber &&
                         pageNumber.map(number => (
-                            <Box 
-                                key={number}
-                                display='flex' 
-                                flexDirection='row'  
-                                className={currentPage===number?'PaginationActive':'PaginationNotActive'} 
-                                onClick = {()=> pagination (number)}
-                            >{number}
-                            </Box>       
+
+                                <Box
+                                    key={number}
+                                    display='flex'
+                                    flexDirection='row'
+                                    className={currentPage===number?style.PaginationActive:style.PaginationNotActive}
+                                    onClick = {()=> pagination (number)}
+                                >{number}
+                                </Box>
+
                         ))
                 }
-                          <div className="rightArrow">
-                            <span classnName="paginationLine"></span>
-                            <HiChevronDoubleRight
-                                onClick = {currentPage < pageNumber.length?()=> pagination (currentPage+1):null}
-                            />
-                           </div>
+                        <button disabled={currentPage===2?true:false} className={`${style.Arrow} ${style.ArrowRight}`} onClick = {currentPage < pageNumber.length?()=> pagination (currentPage+1):null}>
+                            <span classnName={style.paginationLine}></span>
+                            <HiChevronDoubleRight/>
+                        </button>
             </Box>
             </div>
 

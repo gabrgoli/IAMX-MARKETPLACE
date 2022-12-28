@@ -13,9 +13,11 @@ import LayoutPrincipal from '../../Layouts/LayoutPrincipal'
 const Landing=()=>{
     const navigate=useNavigate()
 
+
+
     return(
         <LayoutPrincipal showNavbar={false}>
-            <div className='LandingConteiner'>       
+            <div className='LandingConteiner' >       
                     <button className='LandingButtom' onClick={()=>navigate('/home')}>
                                 <img  className='LandingImage' src="iamxLogoLanding.svg" alt="IAMX" ></img>
                     </button>

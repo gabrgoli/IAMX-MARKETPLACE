@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./NavBarMobile.module.css";
 //import './NavBarMobile.css'
-import { Style } from "@mui/icons-material";
 import { IoHomeOutline } from "react-icons/io5";
 import { IoSearchOutline, IoPersonOutline } from "react-icons/io5";
 import { MdOutlineDashboard } from "react-icons/md";

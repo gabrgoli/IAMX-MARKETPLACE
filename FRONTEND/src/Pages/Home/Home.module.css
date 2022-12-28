@@ -1,0 +1,31 @@
+@media (min-width: 600px) {
+    .CardProductGrid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .Container{
+
+  }
+
+  .main{
+    min-height: 70vw;
+  }
+
+  .HomeTextNoOffers{
+    display: flex;
+    justify-content: center;
+    font-family: var(--font1) ;
+    font-size: xx-large;
+    flex-grow: 1;
+  }
+
+  .offersContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1.5em 1.5em 0 0;
+    background-color: #fcfcfc;
+  }

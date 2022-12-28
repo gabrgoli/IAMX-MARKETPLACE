@@ -69,7 +69,7 @@ const Form1 = () => {
           <input type="text" name="walletAdress" placeholder="Your Wallet Adress" className={errors.walletAdress?"formError formInput ":"formInput"}/>
         </div>
         
-        <button type="submit" name="next" className={loader?"Button1 Button1Disable":"Button1"} value="Button1">{loader?"Loading...":"Next"}</button>
+        <button type="submit" name="next" className={loader?"Button1Disable":"Button1A"} value="Button1">{loader?"Loading...":"Next"}</button>
         
         <section className="errorsClass">
         {

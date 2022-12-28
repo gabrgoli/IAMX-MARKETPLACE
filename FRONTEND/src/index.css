@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --IAMX-color: #007efb;
+  --IAMX-color: #0081FF;
   --font1:'Space Grotesk', 'sans-serif'; 
 }
 
@@ -17,11 +17,17 @@ body {
   padding:0;
   background-color: transparent;
   width: 100%;
-  min-height:50em ;
+  overflow-x: hidden;
+  /* min-height:50em ; */
 
 
 }
 
+
+.img{
+  max-width: 100%;
+  height: auto;
+}
 
 .mainContainer{
   /* position: relative;
@@ -30,21 +36,41 @@ body {
   padding: 30px;
 }
 
-/* h1 {
-  font-size: 20px;
-  margin: 0.67em 0;
-} */
+h1 {
+  margin: 0px;
+}
+h2 {
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
 
+h4 {
+  margin: 0px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 html {
+  box-sizing: border-box;
   height: 100%;
   /* filter: invert(100%);  */
+  font-size: 16px;
+  font-family: var(--font1);
+  scroll-behavior: smooth;
 
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+
 .darkmode{
   background-color: transparent;
   filter: invert(100%);
@@ -55,47 +81,6 @@ html {
   height: 100%;
   position: relative;
 }
-
-.Button1{
-  position: relative;
-  font-family: var(--font1);
-  background-color: var(--IAMX-color);
-  border-radius: 8px;
-  color: white;
-  padding: 18px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 20px !important;
-  line-height: 140%;
-  width: 100%;
-  height: 60px;
-}
-
-.Button1 h1{
-  font-family: var(--font1);
-  background-color: var(--IAMX-color);
-  font-size: 20px !important;
-}
-
-.Button1 .icon{
-  position: absolute;
-  right: 24px;
-  top: 33%;
-}
-
-.Button1Disable{
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-
-
-
-
-
-
-
-
 
 
 .footer {
@@ -129,26 +114,21 @@ html {
 /*Swiper*/
 .swiperBox{
   display: flex;
-  position: absolute;
   width: 100%;
   height: 13em;
   background-color: #000000;
-  margin-bottom: 4em;
-  z-index: 0;
 }
 
 .swiperSlide{
   display: flex;
   height: 15em;
   background-color: #007efb;
-  z-index: 0;
 }
 
 
 /* PaymentRequest */
 .box-buttons-paymentRequest{
   display: flex;
-  
 }
 
 .buttonPaymentRequest{

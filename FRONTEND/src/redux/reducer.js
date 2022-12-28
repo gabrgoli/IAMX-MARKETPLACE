@@ -79,10 +79,6 @@ const rootReducer = createReducer(initialState, (builder) => {
       state.offers=action.payload
     })
 
-    .addCase(actions.SIDEMENUOPENCLOSE, (state, action) => {
-      state.sideMenuOpenClose=action.payload
-    })
-
     .addCase(actions.DARKMODE, (state, action) => {
       state.darkMode=action.payload
     })

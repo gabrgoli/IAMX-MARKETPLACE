@@ -4,7 +4,12 @@ import './TermsConditions.css'
 
 import Button1 from '../../Components/Button1/Button1'
 
+
+
 const TermsConditions = () => {
+
+  const [isChecked, setIsChecked] = React.useState(false);
+
   return (
 
     <div>
@@ -20,7 +25,7 @@ const TermsConditions = () => {
           <div className='TermsConditionsTextContainer'>
               <div className='TermsConditionsTextContainer2'>
                   <label className='TermsConditionsCheckBox'>
-                    <input type="checkbox" id="cbox1" value="TermsConditionsCheckBox"/>
+                    <input checked={isChecked} type="checkbox" id="cbox1" value="TermsConditionsCheckBox" onChange={()=>setIsChecked(!isChecked)}/>
                     <span className="checkmark"></span>
                   </label>
                   <h1 className='TermsConditionsText'>
@@ -28,7 +33,7 @@ const TermsConditions = () => {
                     of the General Terms and Conditions of the IAMX partners and accept them. I have read the pre-contractual information and contract summary and accept them.
                   </h1>
               </div>
-              <Button1 text={"Start KYC"} active={true}/>
+              <Button1 text={"Start KYC"} active={isChecked}/>
           </div>
 
 

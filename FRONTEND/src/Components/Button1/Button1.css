@@ -1,0 +1,79 @@
+.Button1A{
+    position: relative;
+    font-family: var(--font1);
+    background-color: var(--IAMX-color);
+    border-radius: 8px;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    width: 100%;
+    height: 60px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  .Button1B{
+    position: relative;
+    font-family: var(--font1);
+    background-color: white;
+    border-radius: 8px;
+    color: var(--IAMX-color);
+    padding: 18px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px ;
+    line-height: 140%;
+    width: 100%;
+    height: 60px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  .Button1A h1{
+    font-family: var(--font1);
+    background-color: var(--IAMX-color);
+    font-size: 20px;
+  }
+  
+  .Button1A .Button1AIcon{
+    position: absolute;
+    top: 30%;
+    right:20px;
+
+  }
+  
+  .Button1Disable{
+    position: relative;
+    font-family: var(--font1);
+    background-color: var(--IAMX-color);
+    border-radius: 8px;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    width: 100%;
+    height: 60px;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .Button1A:active {
+    background-color: #085066;
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+.Button1B:active {
+  background-color: #ececaa;
+  transform: scale(0.98);
+  /* box-shadow: 3px 2px 22px 1px rgba(42, 31, 31, 0.903); */
+
+}

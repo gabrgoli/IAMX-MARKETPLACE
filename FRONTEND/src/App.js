@@ -13,6 +13,12 @@ import StartForm from './Pages/StartForm/StartForm';
 import Login from './Pages/Login/Login';
 import ManageIdentity from './Pages/ManageIdentity';
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import OrderNowBusiness from "./Pages/OrderNowPage/OrderNowBusiness";
+import OrderNowPrivate from "./Pages/OrderNowPage/OrderNowPrivate";
+import OrderNowSubscription from "./Pages/OrderNowPage/OrderNowSubscription";
+import OrderNowPayAsYouGo from "./Pages/OrderNowPage/OrderNowPayAsYouGo";
+
+
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -46,6 +52,10 @@ function App() {
             <Route path='/offer/:id' element={<OfferDetails/>}/>
             <Route path="/ManageIdentity" element={<ManageIdentity />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/OrderNow-Business" element={<OrderNowBusiness />} />
+            <Route path="/OrderNow-Private" element={<OrderNowPrivate />} />
+            <Route path="/OrderNow-Subscription" element={<OrderNowSubscription />} />
+            <Route path="/ordernow-pay-as-you-go" element={<OrderNowPayAsYouGo />} />
           {/* </Route>
         </Route> */}
         {/* <Route path='/passwordchange' element={<PasswordChange/>}/> */}

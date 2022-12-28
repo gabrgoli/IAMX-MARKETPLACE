@@ -23,14 +23,14 @@ export default function CardOffer({offer,defaultPic='https://www.wimacpc.com/ass
         onClick={()=>navigate(`/offer/${offer.idoffer}`)} 
         // sx={{cursor:'pointer' ,height:520, width: {xs:250 ,sm:250}}}
     >
-
-        <CardMedia     
+        {/* <CardMedia     
             component="img"
             height="200"
             image={offer.picture||defaultPic}
             alt="gf"
             sx={{objectFit:'cover'}}
-        />
+        /> */}
+        <img className='CardOfferimage' src={offer?.picture} alt='pic'/>
         <div className='CardOfferInfo'>
             <div className='CardOfferText'>
                 <Tooltip title={offer.title} placement="top">
